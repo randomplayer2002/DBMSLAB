@@ -1,0 +1,24 @@
+#TABELS:
+
+EMPLOYEE:
+
+ SSN   FNAME    LNAME    ADDRESS    GENDER    SALARY    SUPRESSN   DNO
+------ -------  -------  --------  --------- --------  ---------  ------
+111   JAMES     SCOTT   MYSORE      M        123456      111         1
+222   RAMESH    ARVIND  BANGALORE   M        345672      222         2
+333   DAVID     HUSH    HONULULU    M        70000       333         2
+444   KAVYA     BIND    GUWAHATI    F        750000      444         2
+555   HASHMI    KHAN    MUMBAI      F        450000      555         3
+666   PINKY     KHANNA  PUNJAB      F        560000      666         4
+777   KUSHAL    KUNDAN  ASSAM       M        35000       777         5
+
+
+DEPARTMENT:
+
+DNAME      DNO     MGRSTARTDATE    MGRSSN
+------    -----   --------------  ----------
+ACCOUNTS   1        12-AUG-98       333
+RESEARCH   2        12-AUG-98       111
+PRODUCTION 3        12-AUG-98       444
+SALES      4        12-AUG-98       555
+TESTING    5        12-AUG-98       777

@@ -36,7 +36,7 @@ ORDER BY Snum;
 SELECT MAX(S.age) AS Age FROM STUDENT S WHERE (S.Major = 'History') OR S.Snum IN (Select E.Snum
 FROM CLASS C , ENROLLED E, FACULTY F WHERE E.cname = C.cname AND C.Fid = F.Fid AND F.Fname =
 'Ravi');
-AND
+
 
 SELECT DISTINCT S.Sname FROM STUDENT S where S.Snum IN (SELECT E1.Snum FROM Enrolled E1,Enrolled
 E2, Class C1, Class C2 where E1.snum = E2.snum AND E1.cname <> E2.cname AND E1.cname =

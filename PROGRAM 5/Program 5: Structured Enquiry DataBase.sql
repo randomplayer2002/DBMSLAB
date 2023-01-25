@@ -38,6 +38,16 @@ FROM CLASS C , ENROLLED E, FACULTY F WHERE E.cname = C.cname AND C.Fid = F.Fid A
 'Ravi');
 
 
-SELECT DISTINCT S.Sname FROM STUDENT S where S.Snum IN (SELECT E1.Snum FROM Enrolled E1,Enrolled
-E2, Class C1, Class C2 where E1.snum = E2.snum AND E1.cname <> E2.cname AND E1.cname =
+SELECT DISTINCT S.Sname FROM STUDENT S where S.Snum IN (SELECT E1.Snum FROM ENROLLED E1,ENROLLED
+E2, CLASS C1, CLASS C2 where E1.snum = E2.snum AND E1.cname <> E2.cname AND E1.cname =
 C1.cname AND E2.cname = C2.cname AND C1.meets_at = C2.meets_at);
+
+
+SELECT DISTINCT F.Fname , COUNT(*) AS CourseCount FROM CLASS C , Faculty F WHERE C.FID NOT IN
+(SELECT Fid FROM CLASS WHERE Room IN (SELECT Room FROM CLASS WHERE Room!= 'R128')) AND C.Fid =
+F.Fid GROUP BY F.Fname;
+
+
+CREATE VIEW STUDENT_DETAILS AS 
+SELECT S.SNUM, S.SNAME, S.MAJOR, S.LEV, S.AGE,
+E.CNAME FROM STUDENT S, ENROLLED E WHERE S.SNUM = E.SNUM;
